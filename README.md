@@ -25,9 +25,13 @@ Tools like **Railgun** enable private transactions, but the process is **manual,
 
 One misstep breaks privacy.
 
+Similar challenges exist with [Privacy Pools](https://privacypools.com/). After depositing into a pool, users must wait 24+ hours before withdrawing — and the withdrawal itself must be done manually. This creates friction and room for error.
+
+Additionally, if the volume of withdrawals from a pool is low, it may still be possible to correlate the depositor and withdrawer wallets with some probability — weakening the privacy guarantee.
+
 `new-wallet-fundr` **automates the entire flow** — so privacy becomes routine, not risky.
 
-Note: Inspired by the Railgun-focused approach in the video ["3 ways to fund ETH wallet privately 2026"](https://youtu.be/ppRz6Hqoics). Possible to replace Railgun by [Privacy Pools](https://privacypools.com/).
+Note: Inspired by the Railgun-focused approach in the video ["3 ways to fund ETH wallet privately 2026"](https://youtu.be/ppRz6Hqoics). After Railgun, we can add support for [Privacy Pools](https://privacypools.com/) as well.
 
 ---
 
@@ -49,6 +53,8 @@ The tool orchestrates a 5-step journey:
 
 5. **Bridge-out** (via [li.fi](https://li.fi))  
    → Send funds to final destination chain
+
+Additionally, for protocols like [Privacy Pools](https://privacypools.com/) where withdrawal timing matters, we will use [Allium data for AI agents](https://x.com/AlliumLabs/status/2019810793324482901) to monitor on-chain activity of the pools and automatically recommend the best time for withdrawal — maximizing the privacy set.
 
 Result:  
 ✅ On-chain link broken  
@@ -86,7 +92,7 @@ Result:
 
 ## Integration with li.fi
 
-`new-wallet-fundr` uses **[li.fi SDK]([https://docs.li.fi/](https://docs.li.fi/sdk/overview))** for both bridge-in and bridge-out steps.  
+`new-wallet-fundr` uses **[li.fi SDK](https://docs.li.fi/sdk/overview)** for both bridge-in and bridge-out steps.  
 This enables:
 
 - Universal routing across 20+ chains
