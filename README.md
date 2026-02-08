@@ -36,10 +36,10 @@ Note: Inspired by the Railgun-focused approach in the video ["3 ways to fund ETH
 The tool orchestrates a 5-step journey:
 
 1. **Bridge-in** (via [li.fi](https://li.fi))  
-   → Move funds from source chain to a Railgun-supported chain (e.g., Arbitrum)
+   → Move funds from source chain to a Railgun-supported chain (e.g., Arbitrum) - use [LI.FI SDK](https://docs.li.fi/sdk/overview)
 
 2. **Shield**  
-   → Deposit into Railgun’s private pool (using [Railgun Wallet SDK](https://docs.railgun.org/developer-guide)
+   → Deposit into Railgun’s private pool (using [Railgun Wallet SDK](https://docs.railgun.org/developer-guide))
 
 3. **Wait for PPOI**  
    → Poll Railgun’s bucket status every 5 minutes until spendable (~1 hour)
@@ -57,7 +57,7 @@ Result:
 
 ---
 
-## 🛠️ Technical Design
+## Technical Design
 
 ### V1: CLI / Simple UX
 
@@ -86,7 +86,7 @@ Result:
 
 ## Integration with li.fi
 
-`new-wallet-fundr` uses the **[li.fi SDK](https://docs.li.fi/)** for both bridge-in and bridge-out steps.  
+`new-wallet-fundr` uses **[li.fi SDK]([https://docs.li.fi/](https://docs.li.fi/sdk/overview))** for both bridge-in and bridge-out steps.  
 This enables:
 
 - Universal routing across 20+ chains
